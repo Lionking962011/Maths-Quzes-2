@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en">
+<head>
+    <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <header>Login Form  for first Player</header>
+    <form action="#">
+      <div class="field email">
+        <div class="input-area">
+          <input type="text" placeholder="Email Address">
+          <i class="icon fas fa-envelope"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Email can't be blank</div>
+      </div>
+      <div class="field password">
+        <div class="input-area">
+          <input type="text" id="name1" placeholder="Name">
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Name can't be blank</div>
+      </div>
+      <input type="submit" onclick="save()" value="Login">
+    </form>
+    <div class="sign-txt"> <h4 id="4l">Second Player </h4><button id="button"onclick="update()">Login Now</button> </a></div>
+
+    
+  </div>
+  
+  <div class="wrapper" id="form1">
+  <form action="#" id="form">
+    <header style="margin-bottom:50px">Login Form for second Player</header>
+    <div class="field email">
+      <div class="input-area">
+        <input type="text" placeholder="Email Address">
+        <i class="icon fas fa-envelope"></i>
+        <i class="error error-icon fas fa-exclamation-circle"></i>
+      </div>
+      <div class="error error-txt">Email can't be blank</div>
+    </div>
+    <div class="field password">
+      <div class="input-area">
+        <input type="text" id="name2"placeholder="Name">
+        <i class="icon fas fa-lock"></i>
+        <i class="error error-icon fas fa-exclamation-circle"></i>
+      </div>
+      <div class="error error-txt">Name can't be blank</div>
+    </div>
+    <button onclick="send()"> <a href="gamepage.html">Login</a> </button>
+  </form>
+</div>
+
+  <script>
+      function update()
+      {
+          document.getElementById("form1").style.display="block";
+          document.getElementById("button").style.display="none";
+          document.getElementById("4l").style.display="none";
+      }
+
+    function save()
+    {
+    var name_of_player1= document.getElementById("name1").value;
+    localStorage.setItem("name1", name_of_player1 );
+    }
+
+    function send()
+    {
+    var name_of_player2= document.getElementById("name2").value;
+    localStorage.setItem("name2",name_of_player2 );
+    }
+
+  </script>
+
+</body>
+</html>
